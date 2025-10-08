@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Frontend Development",
+      "description": "Building responsive and interactive user interfaces using React.js, Next.js, and modern CSS frameworks.",
+      "icon": "code",
+      "skills": ["React.js", "Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    {
+      "id": 2,
+      "title": "Backend Development",
+      "description": "Creating robust server-side applications with Node.js, Express.js, and RESTful API design.",
+      "icon": "server",
+      "skills": ["Node.js", "Express.js", "REST APIs", "Authentication"]
+    },
+    {
+      "id": 3,
+      "title": "Database Management",
+      "description": "Designing and implementing efficient database solutions using MongoDB and SQL databases.",
+      "icon": "database",
+      "skills": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
+    },
+    {
+      "id": 4,
+      "title": "Full Stack Solutions",
+      "description": "End-to-end web application development from concept to deployment with modern DevOps practices.",
+      "icon": "layers",
+      "skills": ["MERN Stack", "Docker", "AWS", "CI/CD"]
+    }
+  ]
+}

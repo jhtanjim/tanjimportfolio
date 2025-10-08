@@ -1,0 +1,114 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Khanar Dokan",
+      "description": "A full-featured e-commerce platform with payment integration, user authentication, and admin dashboard.",
+      "image": "https://i.ibb.co.com/23fwrLTs/image.png",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://khanar-dokan.vercel.app/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "fullstack"
+    },
+    {
+      "id": 2,
+      "title": "Social Media Dashboard",
+      "description": "Real-time social media analytics dashboard with data visualization and reporting features.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Next.js", "Express", "PostgreSQL", "Chart.js"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "fullstack"
+    },
+    {
+      "id": 3,
+      "title": "Task Management App",
+      "description": "Collaborative task management application with real-time updates and team collaboration features.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": false,
+      "category": "fullstack"
+    },
+    {
+      "id": 4,
+      "title": "Blog Platform",
+      "description": "Modern blogging platform with markdown support, comments, and SEO optimization.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Next.js", "MongoDB", "Tailwind CSS", "MDX"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": false,
+      "category": "fullstack"
+    },
+    {
+      "id": 5,
+      "title": "Gain Cards",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/359Rr6fg/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://gaincards.com/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
+    },
+    {
+      "id": 11,
+      "title": "Dar-ul Madina BD",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/j9HTXRS5/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://darulmadinabd.vercel.app/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
+    },
+    {
+      "id": 6,
+      "title": "Shantix Corp",
+      "description": "Beautiful weather application with location-based forecasts and interactive maps.",
+      "image": "https://i.ibb.co.com/0yKDk3wm/image.png",
+      "technologies": ["React", "TypeScript", "OpenWeather API"],
+      "liveUrl": "https://shantix-corp.com/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
+    },
+    {
+      "id": 7,
+      "title": "RESTful API",
+      "description": "Scalable REST API with authentication, rate limiting, and comprehensive documentation.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Node.js", "Express", "MongoDB", "JWT"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": false,
+      "category": "backend"
+    },
+    {
+      "id": 8,
+      "title": "Authentication Service",
+      "description": "Microservice for user authentication with OAuth, JWT, and session management.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Node.js", "PostgreSQL", "Redis", "Passport.js"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": false,
+      "category": "backend"
+    },
+    {
+      "id": 9,
+      "title": "Real-time Chat App",
+      "description": "Real-time messaging application with group chats, file sharing, and notifications.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "technologies": ["React", "Node.js", "Socket.io", "MongoDB"],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": false,
+      "category": "fullstack"
+    }
+  ]
+}
