@@ -1,13 +1,13 @@
-import { Github, Linkedin, Twitter, Facebook, Heart } from "lucide-react"
-import profileData from "@/data/profile.json"
+import profileData from "@/data/profile.json";
+import { Facebook, Github, Heart, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const socialIcons = {
     github: Github,
     linkedin: Linkedin,
-    twitter: Twitter,
+    instagram: Instagram,
     facebook: Facebook,
-  }
+  };
 
   return (
     <footer className="py-12 px-4 border-t border-border bg-secondary/30">
@@ -15,7 +15,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-4">
             {Object.entries(profileData.social).map(([platform, url]) => {
-              const Icon = socialIcons[platform as keyof typeof socialIcons]
+              const Icon = socialIcons[platform as keyof typeof socialIcons];
               return (
                 <a
                   key={platform}
@@ -26,7 +26,7 @@ export function Footer() {
                 >
                   <Icon className="w-5 h-5" />
                 </a>
-              )
+              );
             })}
           </div>
           <div className="text-center">
@@ -39,5 +39,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

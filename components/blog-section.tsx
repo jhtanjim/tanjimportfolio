@@ -1,22 +1,35 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import blogData from "@/data/blog.json"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import blogData from "@/data/blog.json";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
+import Image from "next/image";
 
 export function BlogSection() {
+  // Sort posts by date (newest first) and get only the latest 3
+  const latestPosts = [...blogData.posts]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
+
   return (
     <section id="blog" className="py-20 px-4 bg-secondary/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Latest Blog Posts</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Latest Blog Posts
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
             Thoughts, tutorials, and insights about web development
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogData.posts.map((post) => (
+          {latestPosts.map((post) => (
             <Card
               key={post.id}
               className="bg-card border-border overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
@@ -35,7 +48,9 @@ export function BlogSection() {
                 </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-xl line-clamp-2">{post.title}</CardTitle>
+                <CardTitle className="text-xl line-clamp-2">
+                  {post.title}
+                </CardTitle>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
@@ -63,7 +78,17 @@ export function BlogSection() {
             </Card>
           ))}
         </div>
+
+        {/* View All Posts Button */}
+        {blogData.posts.length > 3 && (
+          <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="group">
+              <a href="blogs">View All Blog </a>
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        )}
       </div>
     </section>
-  )
+  );
 }

@@ -2,33 +2,135 @@
   "posts": [
     {
       "id": 1,
-      "title": "Getting Started with MERN Stack Development",
-      "excerpt": "Learn the fundamentals of building full-stack applications using MongoDB, Express, React, and Node.js.",
-      "date": "2024-01-15",
-      "readTime": "5 min read",
-      "category": "Tutorial",
-      "image": "/placeholder.svg?height=300&width=500",
-      "slug": "getting-started-mern-stack"
+      "title": "Mastering React Server Components in Next.js 14",
+      "excerpt": "Explore the power of React Server Components and how they revolutionize data fetching, improve performance, and reduce client-side JavaScript in modern Next.js applications.",
+      "date": "2024-12-15",
+      "readTime": "8 min read",
+      "category": "React",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop",
+      "slug": "mastering-react-server-components-nextjs-14",
+      "tags": ["Next.js", "React", "Server Components", "Performance"]
     },
     {
       "id": 2,
-      "title": "Best Practices for React Performance",
-      "excerpt": "Discover essential techniques to optimize your React applications for better performance and user experience.",
-      "date": "2024-01-10",
-      "readTime": "7 min read",
-      "category": "Performance",
-      "image": "/placeholder.svg?height=300&width=500",
-      "slug": "react-performance-best-practices"
+      "title": "Building Type-Safe APIs with tRPC and TypeScript",
+      "excerpt": "Learn how to build end-to-end type-safe APIs using tRPC, eliminating the need for API documentation and catching errors at compile time instead of runtime.",
+      "date": "2024-11-28",
+      "readTime": "10 min read",
+      "category": "Backend",
+      "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=500&fit=crop",
+      "slug": "building-type-safe-apis-trpc-typescript",
+      "tags": ["TypeScript", "tRPC", "API", "Type Safety"]
     },
     {
       "id": 3,
-      "title": "Building RESTful APIs with Node.js",
-      "excerpt": "A comprehensive guide to creating scalable and maintainable REST APIs using Node.js and Express.",
-      "date": "2024-01-05",
+      "title": "CSS Grid and Flexbox: When to Use Which?",
+      "excerpt": "A comprehensive guide to understanding the differences between CSS Grid and Flexbox, with practical examples showing when to use each layout system for optimal results.",
+      "date": "2024-11-20",
+      "readTime": "6 min read",
+      "category": "CSS",
+      "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&h=500&fit=crop",
+      "slug": "css-grid-flexbox-when-to-use",
+      "tags": ["CSS", "Grid", "Flexbox", "Layout"]
+    },
+    {
+      "id": 4,
+      "title": "Modern Authentication with NextAuth.js v5",
+      "excerpt": "Implement secure authentication in your Next.js applications using NextAuth.js v5 (Auth.js), including OAuth providers, credentials, and JWT strategies.",
+      "date": "2024-11-10",
+      "readTime": "12 min read",
+      "category": "Security",
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
+      "slug": "modern-authentication-nextauth-v5",
+      "tags": ["Authentication", "Next.js", "Security", "OAuth"]
+    },
+    {
+      "id": 5,
+      "title": "Optimizing Web Performance: Core Web Vitals Guide",
+      "excerpt": "Deep dive into Google's Core Web Vitals metrics - LCP, FID, and CLS. Learn practical techniques to improve your website's performance and SEO rankings.",
+      "date": "2024-10-30",
+      "readTime": "9 min read",
+      "category": "Performance",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      "slug": "optimizing-web-performance-core-web-vitals",
+      "tags": ["Performance", "Web Vitals", "SEO", "Optimization"]
+    },
+    {
+      "id": 6,
+      "title": "State Management in 2024: Redux vs Zustand vs Jotai",
+      "excerpt": "Compare modern state management solutions for React applications. Understand the trade-offs and choose the right tool for your project's needs.",
+      "date": "2024-10-18",
+      "readTime": "11 min read",
+      "category": "React",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=500&fit=crop",
+      "slug": "state-management-2024-comparison",
+      "tags": ["State Management", "Redux", "Zustand", "React"]
+    },
+    {
+      "id": 7,
+      "title": "Building Progressive Web Apps (PWAs) with Next.js",
+      "excerpt": "Transform your Next.js application into a fully-featured Progressive Web App with offline support, push notifications, and native-like experience.",
+      "date": "2024-10-05",
+      "readTime": "7 min read",
+      "category": "Tutorial",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
+      "slug": "building-pwas-nextjs",
+      "tags": ["PWA", "Next.js", "Offline", "Mobile"]
+    },
+    {
+      "id": 8,
+      "title": "Mastering Tailwind CSS: Advanced Patterns and Tips",
+      "excerpt": "Level up your Tailwind CSS skills with advanced techniques including custom plugins, dynamic theming, and component-driven design patterns.",
+      "date": "2024-09-22",
+      "readTime": "8 min read",
+      "category": "CSS",
+      "image": "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?w=800&h=500&fit=crop",
+      "slug": "mastering-tailwind-css-advanced-patterns",
+      "tags": ["Tailwind CSS", "Styling", "Design System", "CSS"]
+    },
+    {
+      "id": 9,
+      "title": "MongoDB Aggregation Pipeline: From Basics to Advanced",
+      "excerpt": "Master MongoDB's powerful aggregation framework to perform complex data transformations, analytics, and create efficient data processing pipelines.",
+      "date": "2024-09-10",
+      "readTime": "13 min read",
+      "category": "Database",
+      "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=500&fit=crop",
+      "slug": "mongodb-aggregation-pipeline-guide",
+      "tags": ["MongoDB", "Database", "Aggregation", "Backend"]
+    },
+    {
+      "id": 10,
+      "title": "Docker for Full-Stack Developers: Complete Guide",
+      "excerpt": "Learn how to containerize your full-stack applications with Docker, including multi-stage builds, docker-compose orchestration, and production deployment strategies.",
+      "date": "2024-08-28",
+      "readTime": "15 min read",
+      "category": "DevOps",
+      "image": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&h=500&fit=crop",
+      "slug": "docker-fullstack-developers-guide",
+      "tags": ["Docker", "DevOps", "Containers", "Deployment"]
+    },
+    {
+      "id": 11,
+      "title": "AI-Powered Web Development: Integrating OpenAI APIs",
+      "excerpt": "Explore how to integrate AI capabilities into your web applications using OpenAI's GPT models, including chat interfaces, content generation, and smart features.",
+      "date": "2024-08-15",
       "readTime": "10 min read",
+      "category": "AI",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+      "slug": "ai-powered-web-development-openai",
+      "tags": ["AI", "OpenAI", "GPT", "Integration"]
+    },
+    {
+      "id": 12,
+      "title": "GraphQL vs REST: Making the Right Choice in 2024",
+      "excerpt": "An in-depth comparison of GraphQL and REST APIs, exploring use cases, performance implications, and helping you decide which approach suits your project best.",
+      "date": "2024-08-01",
+      "readTime": "9 min read",
       "category": "Backend",
-      "image": "/placeholder.svg?height=300&width=500",
-      "slug": "building-restful-apis-nodejs"
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
+      "slug": "graphql-vs-rest-2024",
+      "tags": ["GraphQL", "REST", "API", "Architecture"]
     }
   ]
 }
