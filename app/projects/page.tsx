@@ -1,28 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
-import projectsData from "@/data/projects.json"
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import projectsData from "@/data/projects.json";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
-type ProjectCategory = "all" | "frontend" | "backend" | "fullstack"
+type ProjectCategory = "all" | "frontend" | "backend" | "fullstack";
 
 export default function ProjectsPage() {
-  const [activeTab, setActiveTab] = useState<ProjectCategory>("all")
+  const [activeTab, setActiveTab] = useState<ProjectCategory>("all");
 
   const filteredProjects =
-    activeTab === "all" ? projectsData.projects : projectsData.projects.filter((p) => p.category === activeTab)
+    activeTab === "all"
+      ? projectsData.projects
+      : projectsData.projects.filter((p) => p.category === activeTab);
 
   const tabs: { value: ProjectCategory; label: string }[] = [
     { value: "all", label: "All Projects" },
     { value: "frontend", label: "Frontend" },
     { value: "backend", label: "Backend" },
     { value: "fullstack", label: "Full Stack" },
-  ]
+  ];
 
   return (
     <main className="min-h-screen">
@@ -30,7 +38,9 @@ export default function ProjectsPage() {
       <div className="pt-24 pb-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">All Projects</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              All Projects
+            </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
               Explore my complete portfolio of web development projects
             </p>
@@ -93,22 +103,75 @@ export default function ProjectsPage() {
                       size="sm"
                       className="flex-1 bg-transparent transition-all hover:scale-105"
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live
                       </a>
                     </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 bg-transparent transition-all hover:scale-105"
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    {project.category === "fullstack" ? (
+                      <>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 bg-transparent transition-all hover:scale-105"
+                        >
+                          <a
+                            href={project.clientGithubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            Client
+                          </a>
+                        </Button>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 bg-transparent transition-all hover:scale-105"
+                        >
+                          <a
+                            href={project.serverGithubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            Server
+                          </a>
+                        </Button>
+                      </>
+                    ) : project.githubUrl ? (
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 bg-transparent transition-all hover:scale-105"
+                      >
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 bg-transparent cursor-not-allowed opacity-60"
+                        disabled
+                      >
                         <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
+                        Confidential
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -118,5 +181,5 @@ export default function ProjectsPage() {
       </div>
       <Footer />
     </main>
-  )
+  );
 }
