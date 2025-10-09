@@ -24,14 +24,14 @@
     },
     {
       "id": 3,
-      "title": "Task Management App",
-      "description": "Collaborative task management application with real-time updates and team collaboration features.",
-      "image": "/placeholder.svg?height=400&width=600",
-      "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
-      "liveUrl": "https://example.com",
+      "title": "Dar-ul Madina BD",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/j9HTXRS5/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://darulmadinabd.vercel.app/",
       "githubUrl": "https://github.com/yourusername/project",
-      "featured": false,
-      "category": "fullstack"
+      "featured": true,
+      "category": "frontend"
     },
     {
       "id": 4,
@@ -55,17 +55,7 @@
       "featured": true,
       "category": "frontend"
     },
-    {
-      "id": 11,
-      "title": "Dar-ul Madina BD",
-      "description": "Responsive portfolio website with smooth animations and modern design.",
-      "image": "https://i.ibb.co.com/j9HTXRS5/image.png",
-      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
-      "liveUrl": "https://darulmadinabd.vercel.app/",
-      "githubUrl": "https://github.com/yourusername/project",
-      "featured": true,
-      "category": "frontend"
-    },
+
     {
       "id": 6,
       "title": "Shantix Corp",
@@ -109,6 +99,50 @@
       "githubUrl": "https://github.com/yourusername/project",
       "featured": false,
       "category": "fullstack"
+    },
+    {
+      "id": 11,
+      "title": "Janey Enterprise",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/TDdyCfyS/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://janeyenterprise.com/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
+    },
+    {
+      "id": 12,
+      "title": "JRJBD",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/GvZbRbr4/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://jrjbd.org/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
+    },
+    {
+      "id": 13,
+      "title": "Bajao",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/TMyw0zDF/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://summer-camp-school-8c232.web.app/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "fullstack"
+    },
+    {
+      "id": 14,
+      "title": "Khelnar Dokkan",
+      "description": "Responsive portfolio website with smooth animations and modern design.",
+      "image": "https://i.ibb.co.com/23BR1TBq/image.png",
+      "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+      "liveUrl": "https://toy-store-2a941.web.app/",
+      "githubUrl": "https://github.com/yourusername/project",
+      "featured": true,
+      "category": "frontend"
     }
   ]
 }
