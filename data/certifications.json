@@ -1,0 +1,48 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Next Level Web development",
+      "issuer": "Programming Hero",
+      "image": "/images/phero.jpeg",
+      "date": "2023"
+    },
+    {
+      "id": 2,
+      "title": "Frontend Developer Intern",
+      "issuer": "Devcluster",
+      "image": "/images/devcluster.jpeg",
+      "date": "2024"
+    },
+    {
+      "id": 2,
+      "title": "Office Management ",
+      "issuer": "Memory Computer Academy",
+      "image": "/images/officemanagement.jpg",
+      "date": "2019"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Hackathon Winner 2023",
+      "description": "First place in National Web Dev Competition",
+      "image": "/placeholder.svg?height=300&width=400",
+      "date": "2023"
+    },
+    {
+      "id": 2,
+      "title": "Open Source Contributor",
+      "description": "500+ contributions to major projects",
+      "image": "/placeholder.svg?height=300&width=400",
+      "date": "2023"
+    },
+    {
+      "id": 3,
+      "title": "Tech Speaker",
+      "description": "Speaker at React Conference 2024",
+      "image": "/placeholder.svg?height=300&width=400",
+      "date": "2024"
+    }
+  ]
+}

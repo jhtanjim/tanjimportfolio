@@ -1,14 +1,22 @@
-"use client"
+"use client";
 
-import type React from "react"
+import emailjs from "@emailjs/browser";
+import type React from "react";
+import Swal from "sweetalert2";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
-import profileData from "@/data/profile.json"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import profileData from "@/data/profile.json";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -16,43 +24,95 @@ export function ContactSection() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    e.preventDefault();
+    setIsLoading(true);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    emailjs
+      .send(
+        "service_qcfyf2p",
+        "template_1e7t5yi",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: "jh.tanjim.4@gmail.com",
+        },
+        "F6jofYaQ7X5qihVBz"
+      )
+      .then(() => {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully! I'll get back to you as soon as possible.",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#10b981",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Error!",
+          text: "Failed to send message. Please try again or contact me directly.",
+          icon: "error",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#ef4444",
+        });
+        console.error(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: profileData.email, href: `mailto:${profileData.email}` },
-    { icon: Phone, label: "Phone", value: profileData.phone, href: `tel:${profileData.phone}` },
+    {
+      icon: Mail,
+      label: "Email",
+      value: profileData.email,
+      href: `mailto:${profileData.email}`,
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: profileData.phone,
+      href: `tel:${profileData.phone}`,
+    },
     { icon: MapPin, label: "Location", value: profileData.location, href: "#" },
-  ]
+  ];
 
   return (
     <section id="contact" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Get In Touch
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Have a project in mind? Let's work together to bring your ideas to life
+            Have a project in mind? Let's work together to bring your ideas to
+            life
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="lg:col-span-1 space-y-6">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon
+            {contactInfo.map((info) => {
+              const Icon = info.icon;
               return (
-                <Card key={index} className="bg-card border-border">
+                <Card key={info.label} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -70,14 +130,17 @@ export function ContactSection() {
                     </div>
                   </CardContent>
                 </Card>
-              )
+              );
             })}
           </div>
 
           <Card className="lg:col-span-2 bg-card border-border">
             <CardHeader>
               <CardTitle className="text-2xl">Send Me a Message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible</CardDescription>
+              <CardDescription>
+                Fill out the form below and I'll get back to you as soon as
+                possible
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -93,6 +156,7 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      disabled={isLoading}
                       className="bg-background border-border"
                     />
                   </div>
@@ -108,6 +172,7 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      disabled={isLoading}
                       className="bg-background border-border"
                     />
                   </div>
@@ -123,6 +188,7 @@ export function ContactSection() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    disabled={isLoading}
                     className="bg-background border-border"
                   />
                 </div>
@@ -137,13 +203,19 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={isLoading}
                     rows={6}
                     className="bg-background border-border resize-none"
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full md:w-auto">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full md:w-auto"
+                  disabled={isLoading}
+                >
                   <Send className="w-4 h-4 mr-2" />
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
@@ -151,5 +223,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
