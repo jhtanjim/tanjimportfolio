@@ -56,7 +56,7 @@
       "technologies": ["React", "Axios", "API Integration", "Tailwind CSS"],
       "liveUrl": "https://shantix-corp.com/",
       "githubUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "frontend"
     },
     {
@@ -67,7 +67,7 @@
       "technologies": ["React", "Tailwind CSS", "Framer Motion"],
       "liveUrl": "https://janeyenterprise.com/",
       "githubUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "frontend"
     },
     {
@@ -78,7 +78,7 @@
       "technologies": ["React", "Tailwind CSS", "Framer Motion"],
       "liveUrl": "https://jrjbd.org/",
       "githubUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "frontend"
     },
     {
@@ -97,7 +97,7 @@
       "liveUrl": "https://summer-camp-school-8c232.web.app/",
       "clientGithubUrl": "https://github.com/yourusername/bajao-client",
       "serverGithubUrl": "https://github.com/yourusername/bajao-server",
-      "featured": true,
+      "featured": false,
       "category": "fullstack"
     },
     {
@@ -108,7 +108,7 @@
       "technologies": ["React", "Axios", "API Integration", "Tailwind CSS"],
       "liveUrl": "https://toy-store-2a941.web.app/",
       "githubUrl": "https://github.com/yourusername/project",
-      "featured": true,
+      "featured": false,
       "category": "frontend"
     }
   ]
