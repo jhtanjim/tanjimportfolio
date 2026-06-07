@@ -43,45 +43,50 @@ export const skillsData = {
       color: "#339933",
     },
     {
+      name: "NestJS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+      color: "#E0234E",
+    },
+    {
       name: "Express.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       color: "#000000",
       invertOnDark: true,
     },
     {
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      color: "#4169E1",
+    },
+    {
       name: "MongoDB",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       color: "#47A248",
     },
+    // {
+    //   name: "Redis",
+    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    //   color: "#DC382D",
+    // },
     {
       name: "Firebase",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
       color: "#FFCA28",
     },
     {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      color: "#2496ED",
+    },
+    {
       name: "Git",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       color: "#F05032",
     },
-    // {
-    //   name: "PostgreSQL",
-    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    //   color: "#4169E1",
-    // },
-    // {
-    //   name: "Docker",
-    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    //   color: "#2496ED",
-    // },
-    // {
-    //   name: "Redux",
-    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    //   color: "#764ABC",
-    // },
-    // {
-    //   name: "AWS",
-    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    //   color: "#FF9900",
-    // },
+    {
+      name: "Redux",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      color: "#764ABC",
+    },
   ],
 };
